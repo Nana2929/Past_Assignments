@@ -1,3 +1,3 @@
 # Introduction to computer hw7
 Simple CNN
-mnist: Recognizing numbers 
+mnist: Recognizing handwritten numbers 
