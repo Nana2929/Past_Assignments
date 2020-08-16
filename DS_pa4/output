@@ -1,0 +1,11 @@
+[0, Heap_Node(2), Heap_Node(3), Heap_Node(4), Heap_Node(9), Heap_Node(5), Heap_Node(6), Heap_Node(8), Heap_Node(11), Heap_Node(22), Heap_Node(22), Heap_Node(31), Heap_Node(100), Heap_Node(8), Heap_Node(100), Heap_Node(9)]
+Heap_Node(2)
+Heap_Node(3)
+Heap_Node(4)
+Heap_Node(5)
+Heap_Node(6)
+Heap_Node(8)
+Heap_Node(8)
+Heap_Node(9)
+Heap_Node(9)
+Heap_Node(11)
