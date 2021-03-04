@@ -1,0 +1,157 @@
+
+FOR 'd':
+1. Call dfs to find cycles
+2. cycles = {elems of cycle1, elems of cycle2, ...}
+3. Check all cycles, set 
+        (1) all negative-weighted edges (x個)
+        (2) if no negative-weighted edges exist, the min-weighted edge (1個)
+        to be {edges to be removed}.
+4. Call SCC to check if all trees consist of one node only
+5. #check weakly-connected (O(n^2)) 
+ https://www.geeksforgeeks.org/check-if-a-graph-is-strongly-unilaterally-or-weakly-connected/
+
+
+
+
+
+
+# Mst - > Maxmimum spanning tree
+# cut the lightest edges
+visited
+unvisited 
+find the heaviest edge and go
+finished the Mst, return the unvisited set 
+
+cout << "check" << Q.top().first << " " << Q.top().second << endl;
+
+
+MaxST_Prim(Graph G, weight W, r):
+    // is src r arbitrary? 
+    for each u in G.V:
+        u.key = inf // add attr 'key;, add a function to reset pi? 
+        u.pi = NULL
+    r.key = 0
+    Q = G.V // C++ stl:<queue> Priority Queue
+    while Q is not empty:
+        u = Extract_Max(Q)
+        for each v in G.Adj[u]:
+            // if v is not yet visited 
+            if v in Q and w(u,v) < v.key:
+                v.pi = u
+                v.key = w(u,v)
+
+
+class Vertex{
+public:
+    // constructor
+    Vertex(int code) { this->code = code; };
+    // destructor
+    ~Vertex(){};
+    int code = 0;
+    char color;
+    Vertex *pred;
+    int d; // starting 
+    int f; // finishing
+    // key for Max ST 
+    int key;
+    void reset_pred()
+    {
+        this->pred = NULL;
+    }
+}
+
+
+
+
+Dijkstra(G, w, s)
+init-single-src
+S = empty set
+Q = G.V
+while (!Q.isempty())
+    u = EXTRACT-MAX(Q) // edit
+    S = S U {u}
+    for each vertex v in G.Adj[u]
+        RELAX'(u,v,w)
+RELAX'(u,v,w)
+    if v.d > u.d * miu(u,v)
+        v.d =  u.d * miu(u,v)
+        v.pi = u
+
+void DFS::FindCycle(stack<int> &Stack, int g_vertex)
+{
+    // g_vertex has been colored gray 
+    // before u reaches g_vertex 
+    // 12/21
+    int w = 0;
+    vector<tint> cycle;
+    while (x != g_vertex)
+    {
+        int dest = x;
+        x = preds[x];
+        w = weights[x];
+        cycle.push_back(make_tuple(x, dest, w));
+    }
+    cycle.push_back(make_tuple(u, g_vertex, weights[g_vertex]));
+    G.cycles.push_back(cycle);
+};
+
+
+void PrintCycles(Graph G){
+    cout << "________ cycles __________" << endl;
+    for (int i; i < G.cycles.size(); i++)
+    {
+        printf("The %d cycle:", i);
+        for (int j; j < G.cycles[i].size(); j++)
+        {
+            // vector<vector<tint>>
+            cout << get<0>(G.cycles[i][j]) << "," << get<1>(G.cycles[i][j]) << endl;
+        }
+    }
+}
+
+for each v in G.V:
+    let G' = G(V-{v}, E')
+    query(G') for O(|V|-1) with size k = |V|-1, |V|-2, ... and determine the max cardinality α(G) = |M|
+u = v s.t. α(G) is max
+
+Rec_MaxIndepSet(G(V,E), u)
+    let G' be G(V-G.adjList[u], E')
+    query(G') * O(V) times to find the α(G^') =k s.t. it's max among all G^'
+	check the chosen w so that it’s not linked to any vertices in indep_set
+    max_cardinlaity = -inf
+        if k > max_cardinality and w is not linked to any v in indep_set:
+            max_cardinality = k
+            w_makes_max = w
+    // let G'' be G(V-G.adjList[w], E')
+    indep_set ∪ {w_makes_max}
+    while |indep_set| < |M|: 
+        // E' is the edges remaining for vertices in G''
+        Rec_MaxIndepSet(G'', indep_set)
+
+In order for the 3CNF-SAT (in the form of (x∨y∨z)∧(a∨b∨c)…) to be evaluated True, all the clauses must be simultaneously evaluated True, which means  
+
+// run dfs 
+IsBipartite(G)
+    // init colors 
+    for each v \in G.V
+        v.color = N // N for Nil, W, B
+    for each v\in G.V
+        if v.color = N:
+            dfs_visit'(G, v)
+dfs_visit'(G, v)
+    v.color = (the opposite of v.pred.color)
+    for each u \in G.adj[v]:
+        if u.color == N or v.pred.color: 
+            u.color = v.pred.color 
+            u.pred = v
+        else:
+            \\conflict 
+            return "The graph is not bipartite." 
+traverse all vertices to check colors
+all W-colored be one set; B-colored in another 
+return the two bipartite sets
+
+    
+            
+
+    

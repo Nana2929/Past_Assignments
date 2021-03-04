@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "utility": "cpp",
+        "algorithm": "cpp",
+        "iostream": "cpp",
+        "set": "cpp",
+        "deque": "cpp",
+        "functional": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp"
+    }
+}
