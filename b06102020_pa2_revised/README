@@ -1,0 +1,7 @@
+Algorithms 
+2020 Fall 
+Prof. Lee
+PA2: Max Planar Subset 
+B06102020 外文四 楊晴雯
+Please cd to b06102020_pa2 directory and type 'make' to compile;
+Use ./bin/mps <input case> <output case> to run the input case and store its output. 
