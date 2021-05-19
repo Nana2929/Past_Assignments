@@ -1,0 +1,15 @@
++# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Datas
+data/
+*model/
+
+
+# Files
+*.lock
+*.json
+
+# Files 
+.DS_Store
+
