@@ -1,3 +1,3 @@
-# Introduction to computer hw7
-Simple CNN
-mnist: Recognizing handwritten numbers 
+Assignments for DS and Algorithms
+NTU EE DS(2019 Spring)
+NTU EE Algorithms (2019 Fall)
