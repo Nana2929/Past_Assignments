@@ -1,4 +1,5 @@
-*Assignments for DS and Algorithms*
+**Assignments for DS and Algorithms**
 
-NTU EE DS(2019 Spring)
-NTU EE Algorithms (2019 Fall)
+>NTU EE DS (2019 Spring) in *Python*
+
+>NTU EE Algorithms (2019 Fall) in *C++* 
