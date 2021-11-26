@@ -1,0 +1,23 @@
+ICN hw1(1) Calculator Server
+Author: b06102020 楊晴雯
+Usage:
+	- Run socket_server.py and socket_client.py in respective terminals.
+	- Basic Operations:  +, -, *, /, %, Python-supported:
+		- input format: a operator b (whitespace separated,
+				no whitespace at beginning)
+		- 1 + 5
+		- 3 * 7
+		- 5 % 4
+	- Linear Algebra Operations: matmul, dot, norm, determinant are written in LA.py.
+	  	All input should be in INT, FLOAT due to parsing limitation.
+		- input format: no whitespace at beginning, no whitespace in between elements within the vector/matrix
+		- matmul: return the product matrix multiplication, whitespace separeated
+			two list of lists with  * in between
+			- [[12,7,3],[4,5,6],[7,8,9]] * [[1,0,0],[0,1,0],[0,0,1]]
+			- note that the middle sizes should match
+		- dot: return the inner product, whitespaces separated two lists with . in between
+			- [5,0,0,0,0] . [0,0,0,0,0]
+		- norm: return the norm of the vector, norm{space}{list}
+			- norm [101,102,103]
+		- det: return the determinant of a square matrix, set{space}{list of lists}
+			- det [[5,0,0,0,0],[0,0,0,0,-4],[0,0,3,0,0],[0,0,0,1,0],[0,-2,0,0,0]]
